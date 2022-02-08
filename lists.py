@@ -3,6 +3,7 @@
 list_str = ['01','02','03','04','05','06','07','08','09'] + list(map(str, range(10, 71)))
 
 list_datafiles_raw = 'sample-data/raw/00{list_str}'
+list_datafiles_1k = 'sample-data/1k/00{list_str}'
 list_datafiles = 'sample-data/00{list_str}'
 
 datafiles_wfdb = []
@@ -16,6 +17,13 @@ for i in range(len(list_str)):
     datafiles_raw.append(datafiles_str)
 append_str = '.npy'
 datafiles_raw = [sub + append_str for sub in datafiles_raw]
+
+datafiles_1k = []
+for i in range(len(list_str)):
+    datafiles_str = list_datafiles_1k.format(list_str = list_str[i])
+    datafiles_1k.append(datafiles_str)
+append_str = '.npy'
+datafiles_1k = [sub + append_str for sub in datafiles_1k]
 
 datafiles = []
 for i in range(len(list_str)):
