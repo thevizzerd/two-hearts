@@ -1,8 +1,8 @@
 # Create lists for iteration
 
-list_str = ['01','02','03','04','05','06','07','08','09'] + list(map(str, range(10, 71)))
+list_str = ['01','02','03','04','05','06','07','08','09'] + list(map(str, range(10, 70)))
 
-list_datafiles_raw = 'sample-data/raw/00{list_str}'
+list_datafiles_raw = 'sample-data/raw/ECGPCG00{list_str}'
 list_datafiles_1k = 'sample-data/1k/00{list_str}'
 list_datafiles = 'sample-data/00{list_str}'
 
