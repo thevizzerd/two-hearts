@@ -6,6 +6,9 @@ list_datafiles_raw = 'sample-data/raw/00{list_str}'
 list_datafiles_1k = 'sample-data/1k/00{list_str}'
 list_datafiles = 'sample-data/00{list_str}'
 
+append_type = '.npy'
+append_google = 'drive/MyDrive/Masterarbeit/Code/two-hearts/'
+
 datafiles_wfdb = []
 for i in range(len(list_str)):
     datafiles_str = list_datafiles_raw.format(list_str = list_str[i])
@@ -15,23 +18,19 @@ datafiles_raw = []
 for i in range(len(list_str)):
     datafiles_str = list_datafiles_raw.format(list_str = list_str[i])
     datafiles_raw.append(datafiles_str)
-append_str = '.npy'
-datafiles_raw = [sub + append_str for sub in datafiles_raw]
+datafiles_raw = [sub + append_type for sub in datafiles_raw]
 
 datafiles_1k = []
 for i in range(len(list_str)):
     datafiles_str = list_datafiles_1k.format(list_str = list_str[i])
     datafiles_1k.append(datafiles_str)
-append_str = '.npy'
-datafiles_1k = [sub + append_str for sub in datafiles_1k]
+datafiles_1k = [sub + append_type for sub in datafiles_1k]
 
 datafiles = []
 for i in range(len(list_str)):
     datafiles_str = list_datafiles.format(list_str = list_str[i])
     datafiles.append(datafiles_str)
-append_str = '.npy'
-datafiles = [sub + append_str for sub in datafiles]
+datafiles = [sub + append_type for sub in datafiles]
 
-append_str = 'drive/MyDrive/Masterarbeit/Code/two-hearts/'
-datafiles_raw_google = [append_str + sub for sub in datafiles_raw]
-datafiles_google = [append_str + sub for sub in datafiles]
+datafiles_raw_google = [append_google + sub for sub in datafiles_raw]
+datafiles_google = [append_google + sub for sub in datafiles]
